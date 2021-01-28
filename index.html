@@ -1,0 +1,99 @@
+<HTML><HEAD>
+	<TITLE>pseudocodigoHeuristico.psc</TITLE>
+	<STYLE type="text/css">
+		.SSD { color:#FFFFFF; background-color:#000000; }
+		.SS0 { color:#000000; background-color:#FFFFFF; }
+		.SS1 { color:#000000; background-color:#FFFFFF; }
+		.SS2 { font-style: italic; color:#969696; background-color:#FFFFFF; }
+		.SS3 { font-style: italic; color:#0000FF; background-color:#FFFFFF; }
+		.SS4 { color:#8E6B23; background-color:#FFFFFF; }
+		.SS5 { font-weight: bold; color:#000080; background-color:#FFFFFF; }
+		.SS6 { color:#FF0000; background-color:#FFFFFF; }
+		.SS7 { color:#FF0000; background-color:#FFFFFF; }
+		.SS8 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS9 { color:#238E23; background-color:#FFFFFF; }
+		.SS10 { font-weight: bold; color:#000000; background-color:#FFFFFF; }
+		.SS11 { color:#000000; background-color:#FFFFFF; }
+		.SS12 { color:#FF0000; background-color:#F0F0F0; }
+		.SS13 { color:#000000; background-color:#FFFFFF; }
+		.SS14 { color:#DB70DB; background-color:#FFFFFF; }
+		.SS15 { color:#238E23; background-color:#FFFFFF; }
+		.SS16 { color:#000080; background-color:#FFFFFF; }
+		.SS17 { color:#42426F; background-color:#FFFFFF; }
+		.SS18 { color:#FF0000; background-color:#FFFFFF; }
+		.SS19 { color:#000000; background-color:#BFD8D8; }
+		.SS34 { font-weight: bold; color:#FF0000; background-color:#F0F0FF; }
+		.SS35 { font-weight: bold; color:#800000; background-color:#FFFFFF; }
+	</STYLE>
+</HEAD><BODY><PRE>
+<SPAN class="SS5">Funcion</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">formulación</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">generarTabla</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS10">(</SPAN><SPAN class="SS11">predicados</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">individuos</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">universo</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">conectivos</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">cuantificadores</SPAN><SPAN class="SS10">)</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'Tabla generada'</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">formulación</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'*formulación*'</SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS5">FinFuncion</SPAN><SPAN class="SS0">
+
+</SPAN><SPAN class="SS5">Algoritmo</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">procedimientoHeurístico</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">comprender</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">encontrarUniverso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">encontrarPredicado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">encontrarIndividuos</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">encontrarIndiYPred</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Mientras</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">comprender</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'¿Has comprendido el enunciado? el enunciado?'</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS6">'si'</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">comprender</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Verdadero</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">SiNo</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">comprender</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">FinMientras</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Mientras</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">encontrarUniverso</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'¿Encontraste el universo?'</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS6">'si'</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'Escribelo y señala el universo'</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">universo</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">encontrarUniverso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Verdadero</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">SiNo</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">encontrarUniverso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">FinMientras</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Mientras</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">encontrarIndiYPred</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'¿Encontraste todos los Predicados e Individuos?'</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS6">'si'</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS11">encontrarIndiYPred</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Verdadero</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">SiNo</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Mientras</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">encontrarPredicado</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'¿Encontraste los Predicados?'</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta2</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta2</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS6">'si'</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'Escribelos y señala con un color'</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">predicados</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">encontrarPredicado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Verdadero</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">SiNo</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">encontrarPredicado</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">FinMientras</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">Mientras</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">encontrarIndividuos</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Hacer</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'¿Encontraste los individuos?'</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta3</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">Si</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">respuesta3</SPAN><SPAN class="SS10">=</SPAN><SPAN class="SS6">'si'</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Entonces</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'Escribelos y señala con un color'</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">individuos</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">encontrarIndividuos</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Verdadero</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">SiNo</SPAN><SPAN class="SS0">
+                    </SPAN><SPAN class="SS11">encontrarIndividuos</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS5">Falso</SPAN><SPAN class="SS0">
+                </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+            </SPAN><SPAN class="SS5">FinMientras</SPAN><SPAN class="SS0">
+        </SPAN><SPAN class="SS5">FinSi</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">FinMientras</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'Escribe los conectivos'</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">conectivos</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'Escribe los cuantificadores'</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">cuantificadores</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS11">formulación</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS9">&lt;-</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">generarTabla</SPAN><SPAN class="SS10">(</SPAN><SPAN class="SS11">predicados</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">individuos</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">universo</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">conectivos</SPAN><SPAN class="SS10">,</SPAN><SPAN class="SS11">cuantificadores</SPAN><SPAN class="SS10">)</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Escribir</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS6">'La formulización queda de la siguiente manera: '</SPAN><SPAN class="SS0">
+    </SPAN><SPAN class="SS5">Leer</SPAN><SPAN class="SS0"> </SPAN><SPAN class="SS11">formulación</SPAN><SPAN class="SS0">
+</SPAN><SPAN class="SS5">FinAlgoritmo</SPAN><SPAN class="SS0">
+</SPAN>
+</PRE></BODY></HTML>
